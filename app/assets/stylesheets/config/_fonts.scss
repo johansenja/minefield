@@ -6,11 +6,9 @@ $body-font: 'Ubuntu', "sans-serif";
 $headers-font: 'Press Start 2P', "cursive";
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Press Start 2P";
-//   // src: font-url('FontFile.eot');
-//   src: font-url('https://fonts.gstatic.com/s/pressstart2p/v6/e3t4euO8T-267oIAQAu6jDQyK3nVivNm4I81.woff2') format('woff2'),
-//        font-url('https://fonts.gstatic.com/s/pressstart2p/v6/e3t4euO8T-267oIAQAu6jDQyK3nVivNm4I81.ttf') format('truetype')
-//        // font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-// }
-// $my-font: "Press Start 2P";
+@font-face {
+  font-family: "Press Start 2P";
+  // src: font-url('FontFile.eot');
+  src: font-url('PressStart2P-Regular.ttf') format('truetype')
+}
+$my-font: "Press Start 2P";
