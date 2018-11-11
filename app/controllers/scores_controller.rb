@@ -1,7 +1,8 @@
 class ScoresController < ApplicationController
 
   def index
-    @scores = Score.all()
+    scores_reverse = Score.all.sort_by(&:score)
+    @scores = scores_reverse.reverse
     @score = Score.new
   end
 

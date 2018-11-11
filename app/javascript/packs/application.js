@@ -172,7 +172,6 @@ const gameOver = () => {
 
 function updateScore(x) {
   document.getElementById("score").value = score;
-  console.log(document.getElementById("score"))
   fill(0);
   textAlign(RIGHT);
   text(`Score: ${score}`, x, 50);
