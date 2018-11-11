@@ -106,8 +106,9 @@ let obstacles = [];
 let score = 0;
 const bestScores = [0];
 
+
 function preload() {
-  font = loadFont('src/PressStart2P-Regular.ttf');
+  // font = loadFont('src/PressStart2P-Regular.ttf');
 }
 
 function resetSketch() {
@@ -120,7 +121,7 @@ function resetSketch() {
 
 function setup() {
   createCanvas(800,800);
-  textFont(font);
+  textFont('Press Start 2P');
   textSize(fontsize);
   textAlign(CENTER, CENTER);
   resetSketch();
@@ -170,6 +171,8 @@ const gameOver = () => {
 }
 
 function updateScore(x) {
+  document.getElementById("score").value = score;
+  console.log(document.getElementById("score"))
   fill(0);
   textAlign(RIGHT);
   text(`Score: ${score}`, x, 50);
