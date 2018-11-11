@@ -1,0 +1,27 @@
+// Specific CSS for your home-page
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: orange;
+  }
+}
+
+.light {
+  font-size: 18px;
+  color: rgba(0,0,0,0.5);
+}
