@@ -8,7 +8,9 @@ class ScoresController < ApplicationController
   end
 
   def create
-    @score = Score.create(score_params)
+    @score = Score.new(score_params)
+    @score.name = @score.name.gsub(/\</, "")
+    @score.save
     redirect_to root_path
   end
 

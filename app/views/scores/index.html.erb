@@ -24,7 +24,7 @@
   </div>
   <h2>Submit score</h2>
   <%= simple_form_for @score, url: scores_path, method: :post do |f| %>
-      <%= f.input :name %>
+      <%= f.input :name, label: 'Name (15 characters max)' %>
       <%= f.input :score, as: :hidden, input_html: {id: "score"} %>
       <%= f.submit "Submit Score" %>
   <% end %>
