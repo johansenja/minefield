@@ -6,12 +6,22 @@
     <a href="https://github.com/johansenja"><li><i class="fab fa-github"></i></li></a>
     <a href="https://www.linkedin.com/in/johansenja/"><li><i class="fab fa-linkedin"></i></li></a>
   </ul>
-  <p><strong>Leaderboard (top 10):</strong></p>
-  <ul>
-    <% @scores.each do |score| %>
-      <li class="highscore"><%= "#{score.name} | #{score.score}" %></li>
-    <% end %>
-  </ul>
+    <div class="flex-area">
+      <p><strong>Leaderboard (top 10):</strong></p>
+      <p><strong>Recent:</strong></p>
+    </div>
+  <div class="flex-area">
+    <ul>
+      <% @scores.each do |score| %>
+        <li class="highscore"><%= "#{score.name} | #{score.score}" %></li>
+      <% end %>
+    </ul>
+    <ul>
+      <% @recents.each do |score| %>
+        <li class="highscore"><%= "#{score.name} | #{score.score}" %></li>
+      <% end %>
+    </ul>
+  </div>
   <h2>Submit score</h2>
   <%= simple_form_for @score, url: scores_path, method: :post do |f| %>
       <%= f.input :name %>

@@ -30,3 +30,9 @@ a {
 .highscore {
   display: block;
 }
+
+.flex-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

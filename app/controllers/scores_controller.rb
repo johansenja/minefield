@@ -3,6 +3,7 @@ class ScoresController < ApplicationController
   def index
     scores_reverse = Score.all.sort_by(&:score)
     @scores = scores_reverse.reverse.first(10)
+    @recents = Score.all.sort_by(&:created_at).reverse.first(10)
     @score = Score.new
   end
 
