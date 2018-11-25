@@ -1,12 +1,12 @@
-var font,
-  fontsize = 18;
+const font = "Press Start 2P";
+const fontsize = 18;
 let obstacles = [];
 let score = 0;
 const bestScores = [0];
 
-const preload = () => {
-  font = loadFont('<%= font_path "PressStart2P-Regular.ttf" %>');
-}
+// function preload() {
+//   font = loadFont('"PressStart2P-Regular.ttf" %>');
+// }
 
 const resetSketch = () => {
   score = 0
@@ -16,7 +16,7 @@ const resetSketch = () => {
   loop();
 };
 
-const setup = () => {
+function setup() {
   createCanvas(800,800);
   textFont(font);
   textSize(fontsize);
@@ -26,7 +26,7 @@ const setup = () => {
   button.mousePressed(resetSketch);
 }
 
-const draw = () => {
+function draw() {
   background('azure');
   updateScore( width - 50 );
   updateBestScore( width - 50 );
@@ -87,4 +87,4 @@ const updateBestScore = (x) => {
   text(`Best: ${best}`, x, 90);
 };
 
-export { preload, setup, draw }
+export { setup, draw }

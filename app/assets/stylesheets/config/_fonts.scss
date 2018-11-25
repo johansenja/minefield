@@ -1,9 +1,7 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 // Define fonts for body and headers
-$body-font: 'Ubuntu', "sans-serif";
-$headers-font: 'Press Start 2P', "cursive";
 
 // To use a font file (.woff) uncomment following lines
 @font-face {
@@ -12,3 +10,6 @@ $headers-font: 'Press Start 2P', "cursive";
   src: font-url('PressStart2P-Regular.ttf') format('truetype')
 }
 $my-font: "Press Start 2P";
+
+$body-font: 'Ubuntu', "sans-serif";
+$headers-font: $my-font, "cursive";
